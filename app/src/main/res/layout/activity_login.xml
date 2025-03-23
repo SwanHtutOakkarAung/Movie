@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    tools:context=".authentication.Login">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/movie_logo" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        android:background="@drawable/login_card_background"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="25dp">
+
+        <TextView
+            android:id="@+id/lbEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:fontFamily="@font/metropolis_regular"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="16dp"/>
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/lbEmail"
+            android:layout_alignLeft="@+id/lbEmail"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:inputType="text"
+            android:background="@drawable/input_background"
+            android:fontFamily="@font/metropolis_regular"
+            android:textColor="@color/black"
+            android:paddingStart="10dp"/>
+        <TextView
+            android:id="@+id/lbPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:fontFamily="@font/metropolis_regular"
+            android:layout_below="@+id/etEmail"
+            android:layout_alignLeft="@+id/lbEmail"
+            android:layout_marginTop="10dp"/>
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/lbPassword"
+            android:layout_alignLeft="@+id/lbEmail"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:inputType="textPassword"
+            android:background="@drawable/input_background"
+            android:fontFamily="@font/metropolis_regular"
+            android:textColor="@color/black"
+            android:paddingStart="10dp"/>
+        <TextView
+            android:id="@+id/lbForgetPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forget password"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:fontFamily="@font/metropolis_regular"
+            android:layout_below="@+id/etPassword"
+            android:layout_alignRight="@+id/etPassword"
+            android:layout_marginTop="10dp"/>
+        <Button
+            android:id="@+id/buttonLogin"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/lbForgetPassword"
+            android:fontFamily="@font/metropolis_regular"
+            android:text="Log in"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_alignLeft="@+id/etPassword"
+            android:layout_alignRight="@+id/etPassword"/>
+
+        <TextView
+            android:id="@+id/lbAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:fontFamily="@font/metropolis_regular"
+            android:layout_below="@+id/buttonLogin"
+            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/lbSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please register"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:fontFamily="@font/metropolis_regular"
+            android:layout_below="@+id/lbAccount"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

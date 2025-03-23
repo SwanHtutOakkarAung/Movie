@@ -1,17 +1,15 @@
-package com.example.movie
+package com.example.movie.authentication
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.movie.R
 
-class MainActivity : AppCompatActivity() {
+class Login : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        ///delete enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
-        ///delete ViewCompat
-
+        setContentView(R.layout.activity_login)
     }
 }
